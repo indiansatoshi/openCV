@@ -119,7 +119,7 @@ function Sidebar({}: Props) {
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="address">Adress</Label>
+            <Label htmlFor="address">Address</Label>
             <Textarea
               name="address"
               id="address"

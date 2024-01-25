@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>CV</title>
+        <title>openCV</title>
       </Head>
       <style jsx global>{`
         :root {

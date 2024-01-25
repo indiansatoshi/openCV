@@ -244,6 +244,17 @@ function MultiAddInput({ cvObjectKey, singular }: TMultiAddInput) {
                 updateItem(obj.id, e.target.value, e.target.name)
               }
             />
+            <Input
+              className="pr-10 w-fit flex-grow"
+              type="text"
+              name={"location"}
+              id={"location" + obj.id}
+              value={obj.location}
+              placeholder={"Location"}
+              onChange={(e) =>
+                updateItem(obj.id, e.target.value, e.target.name)
+              }
+            />
             <DatePickerWithRange
               date={obj.date}
               setDate={(date) => updateItem(obj.id, date, "date")}
@@ -256,7 +267,7 @@ function MultiAddInput({ cvObjectKey, singular }: TMultiAddInput) {
               onChange={(e) =>
                 updateItem(obj.id, e.target.value, e.target.name)
               }
-              className="pr-16"
+              className="pr-16 w-full list-disc"
             />
             <Button
               className="-ml-16"
@@ -312,7 +323,7 @@ function MultiAddInput({ cvObjectKey, singular }: TMultiAddInput) {
               onChange={(e) =>
                 updateItem(obj.id, e.target.value, e.target.name)
               }
-              className="pr-16"
+              className="pr-16 list-desc"
             />
             <Button
               className="-ml-16"
@@ -367,6 +378,7 @@ function createNewItem(cvObjectKey: CvObjectKey) {
         id: uuidv4(),
         company: "",
         position: "",
+        location: "",
         description: "",
         date: {
           from: undefined,

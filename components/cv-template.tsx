@@ -17,7 +17,7 @@ function CvTemplate({}: Props) {
           {cv.firstName || "Your"} {cv.lastName || "Name"}
         </h1>
         <p>{cv.roleApplying || "The role you are applying for"}</p>
-        <ul className="inline-flex gap-8 list-disc">
+        <ul className="inline-flex gap-8 list-image-item">
           <li>{cv.phone || "Phone"}</li>
           <li>{cv.email || "Email"}</li>
         </ul>
@@ -54,7 +54,7 @@ function CvTemplate({}: Props) {
         >
           Skills
         </h2>
-        <ul className="pt-8 text-slate-500 text-base/7 text-pretty inline-flex flex-wrap gap-x-20 gap-y-8">
+        <ul className="pt-8 text-slate-500 text-base/7 text-pretty inline-flex flex-wrap gap-x-8 gap-y-4 list-inside list-disc">
           {cv.skills.length > 0 ? (
             cv.skills.map((skill) => <li key={skill.id}>{skill.name}</li>)
           ) : (
@@ -83,7 +83,7 @@ function CvTemplate({}: Props) {
                 <div className="job space-y-2" key={exp.id}>
                   <div className="flex justify-between text-slate-600">
                     <p className="text-xl">{exp.company || "Your Company"}</p>
-                    <p>Location</p>
+                    <p>{exp.location}</p>
                   </div>
                   <div className="flex justify-between text-slate-600">
                     <p>{exp.position}</p>
@@ -95,7 +95,7 @@ function CvTemplate({}: Props) {
                           format(exp.date.to, "MMM yyyy")}
                     </p>
                   </div>
-                  <p className="text-slate-700 text-base/7">
+                  <p className="text-slate-700 text-base/7 list-disc">
                     {exp.description || "What did you do here?"}
                   </p>
                 </div>
@@ -111,7 +111,7 @@ function CvTemplate({}: Props) {
                 <p>Position</p>
                 <p>Date</p>
               </div>
-              <p className="text-slate-700 text-base/7">
+              <p className="text-slate-700 text-base/7 list-desc">
                 Write a short description about your experience here and your
                 most important achievements.
               </p>
@@ -146,7 +146,7 @@ function CvTemplate({}: Props) {
                           format(edu.date.to, "MMM yyyy")}
                     </p>
                   </div>
-                  <p className="text-slate-700 text-base/7">
+                  <p className="text-slate-700 text-base/7 list-disc">
                     {edu.description || "What did you do here?"}
                   </p>
                 </div>

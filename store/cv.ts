@@ -23,6 +23,7 @@ export type TCv = {
     id: string
     company: string
     position: string
+    location: string
     description: string
     date: DateRange
   }[]
